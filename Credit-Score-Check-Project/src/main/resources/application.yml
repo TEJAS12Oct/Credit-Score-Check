@@ -1,0 +1,56 @@
+server:
+  port: ${SERVER_PORT}
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: ${JPA_DDL_AUTO}
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: ${HIBERNATE_FORMAT_SQL}
+
+credit-score:
+  schema-migration:
+    enabled: ${CREDIT_SCORE_SCHEMA_MIGRATION_ENABLED}
+  vendor:
+    base-url: ${CREDIT_SCORE_VENDOR_BASE_URL}
+    generate-otp-path: ${CREDIT_SCORE_VENDOR_GENERATE_OTP_PATH}
+    submit-otp-path: ${CREDIT_SCORE_VENDOR_SUBMIT_OTP_PATH}
+    client-id: ${CREDIT_SCORE_VENDOR_CLIENT_ID}
+    secret-key: ${CREDIT_SCORE_VENDOR_SECRET_KEY}
+    connect-timeout-ms: ${CREDIT_SCORE_VENDOR_CONNECT_TIMEOUT_MS}
+    response-timeout-ms: ${CREDIT_SCORE_VENDOR_RESPONSE_TIMEOUT_MS}
+    max-retries: ${CREDIT_SCORE_VENDOR_MAX_RETRIES}
+
+  otp:
+    resend-cooldown-seconds: ${CREDIT_SCORE_OTP_RESEND_COOLDOWN_SECONDS}
+    max-otp-sends: ${CREDIT_SCORE_MAX_OTP_SENDS}
+    session-validity-seconds: ${CREDIT_SCORE_OTP_SESSION_VALIDITY_SECONDS}
+    max-verification-attempts: ${CREDIT_SCORE_MAX_OTP_VERIFICATION_ATTEMPTS}
+    verification-lock-seconds: ${CREDIT_SCORE_OTP_VERIFICATION_LOCK_SECONDS}
+
+  pull-limit:
+    enabled: ${CREDIT_SCORE_PULL_LIMIT_ENABLED}
+    hours: ${CREDIT_SCORE_PULL_LIMIT_HOURS}
+
+  data-encryption:
+    key: ${CREDIT_SCORE_DATA_ENCRYPTION_KEY}
+
+  retention:
+    enabled: ${CREDIT_SCORE_RETENTION_ENABLED}
+    report-days: ${CREDIT_SCORE_RETENTION_REPORT_DAYS}
+    cleanup-cron: ${CREDIT_SCORE_RETENTION_CLEANUP_CRON}
+
+  pdf:
+    s3-bucket: ${CREDIT_SCORE_PDF_S3_BUCKET}
+    s3-folder: ${CREDIT_SCORE_PDF_S3_FOLDER}
+    s3-region: ${CREDIT_SCORE_PDF_S3_REGION}
+    s3-endpoint: ${CREDIT_SCORE_PDF_S3_ENDPOINT}
+    report-validity-days: ${CREDIT_SCORE_PDF_REPORT_VALIDITY_DAYS}
+    download-ttl-minutes: ${CREDIT_SCORE_PDF_DOWNLOAD_TTL_MINUTES}
