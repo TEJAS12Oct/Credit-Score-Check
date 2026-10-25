@@ -1,0 +1,1168 @@
+{
+  "info": {
+    "name": "Credit Score",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/credit-score/health",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "credit-score",
+            "health"
+          ],
+          "query": [],
+          "variable": []
+        }
+      },
+      "response": [
+        {
+          "name": "Health",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/credit-score/health",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "credit-score",
+                "health"
+              ],
+              "query": [],
+              "variable": []
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff",
+              "name": "x-content-type-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0",
+              "name": "x-xss-protection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, no-store, max-age=0, must-revalidate",
+              "name": "cache-control",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "pragma",
+              "value": "no-cache",
+              "name": "pragma",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "expires",
+              "value": "0",
+              "name": "expires",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "DENY",
+              "name": "x-frame-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked",
+              "name": "transfer-encoding",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 07 Oct 2026 12:34:17 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=60",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"code\": \"SERVICE_UP\",\n  \"message\": \"Credit Score service is running\",\n  \"data\": {\n    \"status\": \"UP\",\n    \"timestamp\": \"2026-10-07T12:34:17.386810Z\"\n  }\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Get OTP",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-User-Id",
+            "value": "BOLT114",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          },
+          {
+            "key": "X-Registered-Mobile",
+            "value": "7420871899",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/credit-score/getotp",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "credit-score",
+            "getotp"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"firstName\": \"TEJAS\",\n  \"lastname\": \"JAWALE\",\n  \"panNumber\": \"BVNPJ0638L\",\n  \"dob\": \"12-10-1999\",\n  \"mobileNumber\": \"7420871899\",\n  \"email\": \"tejasjawale67@gmail.com\",\n  \"gender\": \"male\",\n  \"pinCode\": \"411033\",\n  \"consent\": \"I explicitly consent to the collection, processing, and verification of my data for authentication, KYC, and compliance purposes.\"\n}\n\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "GET OTP",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "bolt114",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              },
+              {
+                "key": "X-Registered-Mobile",
+                "value": "7218789399",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/credit-score/getotp",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "credit-score",
+                "getotp"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Ashish\",\n  \"lastname\": \"sawanT\",\n  \"panNumber\": \"LYRPS6106F\",\n  \"dob\": \"04-07-1999\",\n  \"mobileNumber\": \"7218789399\",\n  \"email\": \"ASHISHSAWANT7011@gmail.com\",\n  \"gender\": \"male\",\n  \"pinCode\": \"411033\",\n  \"consent\": \"I explicitly consent to the collection, processing, and verification of my data for authentication, KYC, and compliance purposes.\"\n}\n\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff",
+              "name": "x-content-type-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0",
+              "name": "x-xss-protection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, no-store, max-age=0, must-revalidate",
+              "name": "cache-control",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "pragma",
+              "value": "no-cache",
+              "name": "pragma",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "expires",
+              "value": "0",
+              "name": "expires",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "DENY",
+              "name": "x-frame-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked",
+              "name": "transfer-encoding",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 07 Oct 2026 09:35:08 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=60",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"code\": \"OTP_SENT\",\n  \"message\": \"OTP sent successfully\",\n  \"data\": {\n    \"requestId\": \"CS-47D449C71CB548C2\",\n    \"otpSent\": true,\n    \"resendAfterSeconds\": 30,\n    \"remainingResends\": 1\n  }\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Submit OTP",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          },
+          {
+            "key": "X-User-Id",
+            "value": "BOLT114",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/credit-score/submit-otp",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "credit-score",
+            "submit-otp"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requestId\": \"CS-BF739854F0844583\",\n  \"otp\": \"338766\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "SUBMIT OTP",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "bolt113",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/credit-score/submit-otp",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "credit-score",
+                "submit-otp"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"CS-E740615417134B99\",\n  \"otp\": \"407929\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff",
+              "name": "x-content-type-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0",
+              "name": "x-xss-protection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, no-store, max-age=0, must-revalidate",
+              "name": "cache-control",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "pragma",
+              "value": "no-cache",
+              "name": "pragma",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "expires",
+              "value": "0",
+              "name": "expires",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "DENY",
+              "name": "x-frame-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked",
+              "name": "transfer-encoding",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 07 Oct 2026 09:26:13 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=60",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"code\": \"CREDIT_SCORE_FETCHED\",\n  \"message\": \"Credit score fetched successfully\",\n  \"data\": {\n    \"requestId\": \"CS-E740615417134B99\",\n    \"status\": \"SUCCESS\",\n    \"score\": 740,\n    \"band\": \"VERY_GOOD\",\n    \"interpretation\": \"Strong profile with good approval odds and rates.\",\n    \"report\": {\n      \"reportDate\": \"20261007\",\n      \"reportTime\": \"145612\",\n      \"reportNumber\": \"1791365171604\"\n    },\n    \"summary\": {\n      \"totalAccounts\": 1,\n      \"activeAccounts\": 1,\n      \"closedAccounts\": 0,\n      \"totalOutstanding\": 1211,\n      \"recentEnquiries\": 0\n    },\n    \"partialMatch\": false,\n    \"cautionMessage\": null,\n    \"creditReport\": {\n      \"creditProfile\": {\n        \"details\": {\n          \"reportDate\": 20261007,\n          \"reportTime\": 145612,\n          \"version\": \"V2.4\",\n          \"reportNumber\": \"1791365171604\"\n        }\n      },\n      \"application\": {\n        \"details\": {\n          \"currentApplicationDetails\": {\n            \"enquiryReason\": \"6\",\n            \"financePurpose\": \"Not Reported\",\n            \"amountFinanced\": \"0\",\n            \"durationOfAgreement\": \"0\",\n            \"currentApplicantDetails\": {\n              \"lastName\": \"GRAMOPADHYE\",\n              \"firstName\": \"Dhruva\",\n              \"middleName1\": \"Not Reported\",\n              \"middleName2\": \"Not Reported\",\n              \"middleName3\": \"Not Reported\",\n              \"genderCode\": \"1\",\n              \"incomeTaxPan\": \"Not Reported\",\n              \"panIssueDate\": \"Not Reported\",\n              \"panExpirationDate\": \"Not Reported\",\n              \"passportIssueDate\": \"Not Reported\",\n              \"passportExpirationDate\": \"Not Reported\",\n              \"voterSIdentityCard\": \"Not Reported\",\n              \"voterIdIssueDate\": \"Not Reported\",\n              \"voterIdExpirationDate\": \"Not Reported\",\n              \"driverLicenseNumber\": \"Not Reported\",\n              \"driverLicenseIssueDate\": \"Not Reported\",\n              \"driverLicenseExpirationDate\": \"Not Reported\",\n              \"rationCardNumber\": \"Not Reported\",\n              \"rationCardIssueDate\": \"Not Reported\",\n              \"rationCardExpirationDate\": \"Not Reported\",\n              \"universalIdNumber\": \"Not Reported\",\n              \"universalIdIssueDate\": \"Not Reported\",\n              \"universalIdExpirationDate\": \"Not Reported\",\n              \"dateOfBirthApplicant\": \"20040527\",\n              \"telephoneNumberApplicant1st\": \"******8340\",\n              \"telephoneExtension\": \"Not Reported\",\n              \"telephoneType\": \"Not Reported\",\n              \"mobilePhoneNumber\": \"******8340\",\n              \"emailId\": \"D***@GMAIL.COM\",\n              \"passportNumber\": \"Not Reported\"\n            },\n            \"currentOtherDetails\": {\n              \"income\": \"0\",\n              \"maritalStatus\": \"Not Reported\",\n              \"employmentStatus\": \"Not Reported\",\n              \"timeWithEmployer\": \"Not Reported\",\n              \"numberOfMajorCreditCardHeld\": \"Not Reported\"\n            },\n            \"currentApplicantAddressDetails\": {\n              \"flatNoPlotNoHouseNo\": \"B-1 303 VERTEX SKY VILAS WING-B1\",\n              \"bldgNoSocietyName\": \"Not Reported\",\n              \"roadNoNameAreaLocality\": \"OPPOSITEGOLDEN PARK KALYAN WEST KHADAK\",\n              \"city\": \"421301\",\n              \"landmark\": \"Not Reported\",\n              \"state\": \"27\",\n              \"pinCode\": \"421301\",\n              \"countryCode\": \"IB\"\n            },\n            \"currentApplicantAdditionalAddressDetails\": \"Not Reported\"\n          }\n        }\n      },\n      \"creditAccounts\": {\n        \"summary\": {\n          \"creditAccount\": {\n            \"creditAccountTotal\": \"1\",\n            \"creditAccountActive\": \"1\",\n            \"creditAccountDefault\": \"0\",\n            \"creditAccountClosed\": \"0\",\n            \"cADSuitFiledCurrentBalance\": \"0\"\n          },\n          \"totalOutstandingBalance\": {\n            \"outstandingBalanceSecured\": \"0\",\n            \"outstandingBalanceSecuredPercentage\": \"0\",\n            \"outstandingBalanceUnSecured\": \"1211\",\n            \"outstandingBalanceUnSecuredPercentage\": \"100\",\n            \"outstandingBalanceAll\": \"1211\"\n          }\n        },\n        \"accounts\": [\n          {\n            \"identificationNumber\": \"NBFSFS4816\",\n            \"subscriberName\": \"Snapmint Financial Services Pvt Ltd\",\n            \"accountNumber\": \"****************2606\",\n            \"portfolioType\": \"I\",\n            \"accountType\": \"06\",\n            \"openDate\": \"20260813\",\n            \"creditLimitAmount\": \"Not Reported\",\n            \"highestCreditOrOriginalLoanAmount\": \"1817\",\n            \"termsDuration\": \"Not Reported\",\n            \"termsFrequency\": \"Not Reported\",\n            \"scheduledMonthlyPaymentAmount\": \"Not Reported\",\n            \"accountStatus\": \"11\",\n            \"paymentRating\": \"0\",\n            \"paymentHistoryProfile\": \"0???????????????????????????????????\",\n            \"specialComment\": \"Not Reported\",\n            \"currentBalance\": \"1211\",\n            \"amountPastDue\": \"0\",\n            \"originalChargeOffAmount\": \"Not Reported\",\n            \"dateReported\": \"20260930\",\n            \"dateOfFirstDelinquency\": \"Not Reported\",\n            \"dateClosed\": \"Not Reported\",\n            \"dateOfLastPayment\": \"20260903\",\n            \"suitFiledWillfulDefaultWrittenOffStatus\": \"Not Reported\",\n            \"writtenOffSettledStatus\": \"Not Reported\",\n            \"valueOfCreditsLastMonth\": \"Not Reported\",\n            \"occupationCode\": \"Not Reported\",\n            \"settlementAmount\": \"Not Reported\",\n            \"valueOfCollateral\": \"Not Reported\",\n            \"typeOfCollateral\": \"Not Reported\",\n            \"writtenOffAmtTotal\": \"Not Reported\",\n            \"writtenOffAmtPrincipal\": \"Not Reported\",\n            \"rateOfInterest\": \"Not Reported\",\n            \"repaymentTenure\": \"0\",\n            \"promotionalRateFlag\": \"Not Reported\",\n            \"income\": \"Not Reported\",\n            \"incomeIndicator\": \"Not Reported\",\n            \"incomeFrequencyIndicator\": \"Not Reported\",\n            \"defaultStatusDate\": \"Not Reported\",\n            \"litigationStatusDate\": \"Not Reported\",\n            \"writeOffStatusDate\": \"Not Reported\",\n            \"dateOfAddition\": \"20260831\",\n            \"currencyCode\": \"INR\",\n            \"subscriberComments\": \"Not Reported\",\n            \"consumerComments\": \"Not Reported\",\n            \"accountHoldertypeCode\": \"1\",\n            \"caisAccountHistory\": [\n              {\n                \"year\": \"2026\",\n                \"month\": \"09\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"08\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              }\n            ],\n            \"caisHolderDetails\": [\n              {\n                \"surnameNonNormalized\": \"DHRUVA GRAMOPADHYE\",\n                \"firstNameNonNormalized\": \"Not Reported\",\n                \"middleName1NonNormalized\": \"Not Reported\",\n                \"middleName2NonNormalized\": \"Not Reported\",\n                \"middleName3NonNormalized\": \"Not Reported\",\n                \"alias\": \"Not Reported\",\n                \"genderCode\": \"1\",\n                \"incomeTaxPan\": \"Not Reported\",\n                \"passportNumber\": \"Not Reported\",\n                \"voterIdNumber\": \"Not Reported\",\n                \"dateOfBirth\": \"20040527\"\n              }\n            ],\n            \"caisHolderAddressDetails\": [\n              {\n                \"firstLineOfAddressNonNormalized\": \"B-1 303 VERTEX SKY VILAS WING-B1\",\n                \"secondLineOfAddressNonNormalized\": \"OPPOSITEGOLDEN PARK KALYAN WEST KHADAK\",\n                \"thirdLineOfAddressNonNormalized\": \"PADA KALYAN WESTKALYAN THANE MAHARASHTRA\",\n                \"cityNonNormalized\": \"421301\",\n                \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                \"stateNonNormalized\": \"27\",\n                \"zipPostalCodeNonNormalized\": \"421301\",\n                \"countryCodeNonNormalized\": \"IB\",\n                \"addressIndicatorNonNormalized\": \"01\",\n                \"residenceCodeNonNormalized\": \"Not Reported\"\n              }\n            ],\n            \"caisHolderPhoneDetails\": [\n              {\n                \"telephoneNumber\": \"Not Reported\",\n                \"telephoneType\": \"****\",\n                \"telephoneExtension\": \"Not Reported\",\n                \"mobileTelephoneNumber\": \"******8340\",\n                \"faxNumber\": \"Not Reported\",\n                \"emailId\": \"D***@GMAIL.COM\"\n              }\n            ],\n            \"caisHolderIdDetails\": [\n              {\n                \"incomeTaxPan\": \"******101F\",\n                \"panIssueDate\": \"Not Reported\",\n                \"panExpirationDate\": \"Not Reported\",\n                \"passportNumber\": \"Not Reported\",\n                \"passportIssueDate\": \"Not Reported\",\n                \"passportExpirationDate\": \"Not Reported\",\n                \"voterIdNumber\": \"Not Reported\",\n                \"voterIdIssueDate\": \"Not Reported\",\n                \"voterIdExpirationDate\": \"Not Reported\",\n                \"driverLicenseNumber\": \"Not Reported\",\n                \"driverLicenseIssueDate\": \"Not Reported\",\n                \"driverLicenseExpirationDate\": \"Not Reported\",\n                \"rationCardNumber\": \"Not Reported\",\n                \"rationCardIssueDate\": \"Not Reported\",\n                \"rationCardExpirationDate\": \"Not Reported\",\n                \"universalIdNumber\": \"Not Reported\",\n                \"universalIdIssueDate\": \"Not Reported\",\n                \"universalIdExpirationDate\": \"Not Reported\",\n                \"emailId\": \"D***@GMAIL.COM\"\n              }\n            ],\n            \"suitFiledWillfulDefault\": \"Not Reported\",\n            \"accountReviewData\": []\n          }\n        ]\n      },\n      \"matchInformation\": {\n        \"exactMatch\": \"Y\"\n      },\n      \"enquirySummary\": {\n        \"last7Days\": 0,\n        \"last30Days\": 0,\n        \"last90Days\": 0,\n        \"last180Days\": 0\n      },\n      \"creditEnquiries\": {\n        \"summary\": {\n          \"capsLast7Days\": \"0\",\n          \"capsLast30Days\": \"0\",\n          \"capsLast90Days\": \"0\",\n          \"capsLast180Days\": \"0\"\n        },\n        \"applications\": []\n      },\n      \"nonCreditEnquiries\": {\n        \"summary\": {\n          \"nonCreditCapsLast7Days\": \"0\",\n          \"nonCreditCapsLast30Days\": \"0\",\n          \"nonCreditCapsLast90Days\": \"0\",\n          \"nonCreditCapsLast180Days\": \"0\"\n        },\n        \"applications\": []\n      },\n      \"scoreDetails\": {\n        \"score\": 740,\n        \"confidenceLevel\": null\n      },\n      \"header\": {},\n      \"userMessage\": {}\n    }\n  }\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Get Score",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-User-Id",
+            "value": "BOLT114",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/credit-score/score",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "credit-score",
+            "score"
+          ],
+          "query": [],
+          "variable": []
+        }
+      },
+      "response": [
+        {
+          "name": "Get Score",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "BOLT114",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/credit-score/score",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "credit-score",
+                "score"
+              ],
+              "query": [],
+              "variable": []
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "cache-control",
+              "value": "no-store",
+              "name": "cache-control",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff",
+              "name": "x-content-type-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0",
+              "name": "x-xss-protection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "DENY",
+              "name": "x-frame-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked",
+              "name": "transfer-encoding",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 13 Oct 2026 06:09:26 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=60",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"score\": {\n    \"requestId\": \"CS-BF739854F0844583\",\n    \"status\": \"SUCCESS\",\n    \"score\": 841,\n    \"band\": \"EXCELLENT\",\n    \"interpretation\": \"Top tier with the best approval odds and pricing.\",\n    \"report\": {\n      \"reportDate\": \"20261013\",\n      \"reportTime\": \"113849\",\n      \"reportNumber\": \"1791871729165\"\n    },\n    \"summary\": {\n      \"totalAccounts\": 4,\n      \"activeAccounts\": 3,\n      \"closedAccounts\": 1,\n      \"totalOutstanding\": 65280,\n      \"recentEnquiries\": 0\n    },\n    \"partialMatch\": false,\n    \"cautionMessage\": null,\n    \"creditReport\": {\n      \"creditProfile\": {\n        \"details\": {\n          \"reportDate\": 20261013,\n          \"reportTime\": 113849,\n          \"version\": \"V2.4\",\n          \"reportNumber\": \"1791871729165\"\n        }\n      },\n      \"application\": {\n        \"details\": {\n          \"currentApplicationDetails\": {\n            \"enquiryReason\": \"6\",\n            \"financePurpose\": \"Not Reported\",\n            \"amountFinanced\": \"0\",\n            \"durationOfAgreement\": \"0\",\n            \"currentApplicantDetails\": {\n              \"lastName\": \"SATISH JAWALE\",\n              \"firstName\": \"TEJAS\",\n              \"middleName1\": \"Not Reported\",\n              \"middleName2\": \"Not Reported\",\n              \"middleName3\": \"Not Reported\",\n              \"genderCode\": \"1\",\n              \"incomeTaxPan\": \"Not Reported\",\n              \"panIssueDate\": \"Not Reported\",\n              \"panExpirationDate\": \"Not Reported\",\n              \"passportIssueDate\": \"Not Reported\",\n              \"passportExpirationDate\": \"Not Reported\",\n              \"voterSIdentityCard\": \"Not Reported\",\n              \"voterIdIssueDate\": \"Not Reported\",\n              \"voterIdExpirationDate\": \"Not Reported\",\n              \"driverLicenseNumber\": \"Not Reported\",\n              \"driverLicenseIssueDate\": \"Not Reported\",\n              \"driverLicenseExpirationDate\": \"Not Reported\",\n              \"rationCardNumber\": \"Not Reported\",\n              \"rationCardIssueDate\": \"Not Reported\",\n              \"rationCardExpirationDate\": \"Not Reported\",\n              \"universalIdNumber\": \"Not Reported\",\n              \"universalIdIssueDate\": \"Not Reported\",\n              \"universalIdExpirationDate\": \"Not Reported\",\n              \"dateOfBirthApplicant\": \"19991012\",\n              \"telephoneNumberApplicant1st\": \"******1899\",\n              \"telephoneExtension\": \"Not Reported\",\n              \"telephoneType\": \"Not Reported\",\n              \"mobilePhoneNumber\": \"******1899\",\n              \"emailId\": \"T***@GMAIL.COM\",\n              \"passportNumber\": \"Not Reported\"\n            },\n            \"currentOtherDetails\": {\n              \"income\": \"0\",\n              \"maritalStatus\": \"Not Reported\",\n              \"employmentStatus\": \"Not Reported\",\n              \"timeWithEmployer\": \"Not Reported\",\n              \"numberOfMajorCreditCardHeld\": \"Not Reported\"\n            },\n            \"currentApplicantAddressDetails\": {\n              \"flatNoPlotNoHouseNo\": \"FALT NO 1208 12 TH FLOOR LAKESHORE\",\n              \"bldgNoSocietyName\": \"Not Reported\",\n              \"roadNoNameAreaLocality\": \"BULDING SANTOSH NAGAR WAKAD 1948\",\n              \"city\": \"Not Reported\",\n              \"landmark\": \"Not Reported\",\n              \"state\": \"27\",\n              \"pinCode\": \"411033\",\n              \"countryCode\": \"IB\"\n            },\n            \"currentApplicantAdditionalAddressDetails\": \"Not Reported\"\n          }\n        }\n      },\n      \"creditAccounts\": {\n        \"summary\": {\n          \"creditAccount\": {\n            \"creditAccountTotal\": \"4\",\n            \"creditAccountActive\": \"3\",\n            \"creditAccountDefault\": \"0\",\n            \"creditAccountClosed\": \"1\",\n            \"cADSuitFiledCurrentBalance\": \"0\"\n          },\n          \"totalOutstandingBalance\": {\n            \"outstandingBalanceSecured\": \"0\",\n            \"outstandingBalanceSecuredPercentage\": \"0\",\n            \"outstandingBalanceUnSecured\": \"65280\",\n            \"outstandingBalanceUnSecuredPercentage\": \"100\",\n            \"outstandingBalanceAll\": \"65280\"\n          }\n        },\n        \"accounts\": [\n          {\n            \"identificationNumber\": \"PVT3360001\",\n            \"subscriberName\": \"IDFC FIRST BANK LIMITED\",\n            \"accountNumber\": \"*****4334\",\n            \"portfolioType\": \"I\",\n            \"accountType\": \"05\",\n            \"openDate\": \"20260908\",\n            \"creditLimitAmount\": \"Not Reported\",\n            \"highestCreditOrOriginalLoanAmount\": \"65280\",\n            \"termsDuration\": \"009\",\n            \"termsFrequency\": \"M\",\n            \"scheduledMonthlyPaymentAmount\": \"Not Reported\",\n            \"accountStatus\": \"11\",\n            \"paymentRating\": \"0\",\n            \"paymentHistoryProfile\": \"N\",\n            \"specialComment\": \"Not Reported\",\n            \"currentBalance\": \"65280\",\n            \"amountPastDue\": \"0\",\n            \"originalChargeOffAmount\": \"Not Reported\",\n            \"dateReported\": \"20260930\",\n            \"dateOfFirstDelinquency\": \"Not Reported\",\n            \"dateClosed\": \"Not Reported\",\n            \"dateOfLastPayment\": \"Not Reported\",\n            \"suitFiledWillfulDefaultWrittenOffStatus\": \"Not Reported\",\n            \"writtenOffSettledStatus\": \"Not Reported\",\n            \"valueOfCreditsLastMonth\": \"Not Reported\",\n            \"occupationCode\": \"Not Reported\",\n            \"settlementAmount\": \"Not Reported\",\n            \"valueOfCollateral\": \"Not Reported\",\n            \"typeOfCollateral\": \"Not Reported\",\n            \"writtenOffAmtTotal\": \"Not Reported\",\n            \"writtenOffAmtPrincipal\": \"Not Reported\",\n            \"rateOfInterest\": \"Not Reported\",\n            \"repaymentTenure\": \"9\",\n            \"promotionalRateFlag\": \"Not Reported\",\n            \"income\": \"Not Reported\",\n            \"incomeIndicator\": \"Not Reported\",\n            \"incomeFrequencyIndicator\": \"Not Reported\",\n            \"defaultStatusDate\": \"Not Reported\",\n            \"litigationStatusDate\": \"Not Reported\",\n            \"writeOffStatusDate\": \"Not Reported\",\n            \"dateOfAddition\": \"20260930\",\n            \"currencyCode\": \"INR\",\n            \"subscriberComments\": \"Not Reported\",\n            \"consumerComments\": \"Not Reported\",\n            \"accountHoldertypeCode\": \"1\",\n            \"caisAccountHistory\": [\n              {\n                \"year\": \"2026\",\n                \"month\": \"09\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              }\n            ],\n            \"caisHolderDetails\": [\n              {\n                \"surnameNonNormalized\": \"TEJAS SATISH JAWALE\",\n                \"firstNameNonNormalized\": \"Not Reported\",\n                \"middleName1NonNormalized\": \"Not Reported\",\n                \"middleName2NonNormalized\": \"Not Reported\",\n                \"middleName3NonNormalized\": \"Not Reported\",\n                \"alias\": \"Not Reported\",\n                \"genderCode\": \"1\",\n                \"incomeTaxPan\": \"Not Reported\",\n                \"passportNumber\": \"Not Reported\",\n                \"voterIdNumber\": \"Not Reported\",\n                \"dateOfBirth\": \"19991012\"\n              }\n            ],\n            \"caisHolderAddressDetails\": [\n              {\n                \"firstLineOfAddressNonNormalized\": \"FALT NO 1208 12 TH FLOOR LAKESHORE\",\n                \"secondLineOfAddressNonNormalized\": \"BULDING SANTOSH NAGAR WAKAD 1948\",\n                \"thirdLineOfAddressNonNormalized\": \"MAHARASHTRA\",\n                \"cityNonNormalized\": \"Not Reported\",\n                \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                \"stateNonNormalized\": \"27\",\n                \"zipPostalCodeNonNormalized\": \"411033\",\n                \"countryCodeNonNormalized\": \"IB\",\n                \"addressIndicatorNonNormalized\": \"02\",\n                \"residenceCodeNonNormalized\": \"Not Reported\"\n              }\n            ],\n            \"caisHolderPhoneDetails\": [\n              {\n                \"telephoneNumber\": \"Not Reported\",\n                \"telephoneType\": \"****\",\n                \"telephoneExtension\": \"Not Reported\",\n                \"mobileTelephoneNumber\": \"******1899\",\n                \"faxNumber\": \"Not Reported\",\n                \"emailId\": \"T***@GMAIL.COM\"\n              }\n            ],\n            \"caisHolderIdDetails\": [\n              {\n                \"incomeTaxPan\": \"******638L\",\n                \"panIssueDate\": \"Not Reported\",\n                \"panExpirationDate\": \"Not Reported\",\n                \"passportNumber\": \"Not Reported\",\n                \"passportIssueDate\": \"Not Reported\",\n                \"passportExpirationDate\": \"Not Reported\",\n                \"voterIdNumber\": \"Not Reported\",\n                \"voterIdIssueDate\": \"Not Reported\",\n                \"voterIdExpirationDate\": \"Not Reported\",\n                \"driverLicenseNumber\": \"Not Reported\",\n                \"driverLicenseIssueDate\": \"Not Reported\",\n                \"driverLicenseExpirationDate\": \"Not Reported\",\n                \"rationCardNumber\": \"Not Reported\",\n                \"rationCardIssueDate\": \"Not Reported\",\n                \"rationCardExpirationDate\": \"Not Reported\",\n                \"universalIdNumber\": \"Not Reported\",\n                \"universalIdIssueDate\": \"Not Reported\",\n                \"universalIdExpirationDate\": \"Not Reported\",\n                \"emailId\": \"T***@GMAIL.COM\"\n              }\n            ],\n            \"suitFiledWillfulDefault\": \"00\",\n            \"accountReviewData\": []\n          },\n          {\n            \"identificationNumber\": \"PVT3360001\",\n            \"subscriberName\": \"IDFC FIRST BANK LIMITED\",\n            \"accountNumber\": \"**********2088\",\n            \"portfolioType\": \"R\",\n            \"accountType\": \"10\",\n            \"openDate\": \"20260424\",\n            \"creditLimitAmount\": \"168000\",\n            \"highestCreditOrOriginalLoanAmount\": \"1481\",\n            \"termsDuration\": \"Not Reported\",\n            \"termsFrequency\": \"Not Reported\",\n            \"scheduledMonthlyPaymentAmount\": \"Not Reported\",\n            \"accountStatus\": \"11\",\n            \"paymentRating\": \"0\",\n            \"paymentHistoryProfile\": \"00000???????????????????????????????\",\n            \"specialComment\": \"Not Reported\",\n            \"currentBalance\": \"0\",\n            \"amountPastDue\": \"0\",\n            \"originalChargeOffAmount\": \"Not Reported\",\n            \"dateReported\": \"20260930\",\n            \"dateOfFirstDelinquency\": \"Not Reported\",\n            \"dateClosed\": \"Not Reported\",\n            \"dateOfLastPayment\": \"Not Reported\",\n            \"suitFiledWillfulDefaultWrittenOffStatus\": \"Not Reported\",\n            \"writtenOffSettledStatus\": \"Not Reported\",\n            \"valueOfCreditsLastMonth\": \"Not Reported\",\n            \"occupationCode\": \"Not Reported\",\n            \"settlementAmount\": \"Not Reported\",\n            \"valueOfCollateral\": \"Not Reported\",\n            \"typeOfCollateral\": \"Not Reported\",\n            \"writtenOffAmtTotal\": \"Not Reported\",\n            \"writtenOffAmtPrincipal\": \"Not Reported\",\n            \"rateOfInterest\": \"46.200\",\n            \"repaymentTenure\": \"0\",\n            \"promotionalRateFlag\": \"Not Reported\",\n            \"income\": \"Not Reported\",\n            \"incomeIndicator\": \"Not Reported\",\n            \"incomeFrequencyIndicator\": \"Not Reported\",\n            \"defaultStatusDate\": \"Not Reported\",\n            \"litigationStatusDate\": \"Not Reported\",\n            \"writeOffStatusDate\": \"Not Reported\",\n            \"dateOfAddition\": \"20260430\",\n            \"currencyCode\": \"INR\",\n            \"subscriberComments\": \"Not Reported\",\n            \"consumerComments\": \"Not Reported\",\n            \"accountHoldertypeCode\": \"1\",\n            \"caisAccountHistory\": [\n              {\n                \"year\": \"2026\",\n                \"month\": \"09\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"S\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"08\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"S\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"07\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"S\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"06\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"05\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"04\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              }\n            ],\n            \"caisHolderDetails\": [\n              {\n                \"surnameNonNormalized\": \"TEJAS SATISH JAWALE\",\n                \"firstNameNonNormalized\": \"Not Reported\",\n                \"middleName1NonNormalized\": \"Not Reported\",\n                \"middleName2NonNormalized\": \"Not Reported\",\n                \"middleName3NonNormalized\": \"Not Reported\",\n                \"alias\": \"Not Reported\",\n                \"genderCode\": \"1\",\n                \"incomeTaxPan\": \"******638L\",\n                \"passportNumber\": \"Not Reported\",\n                \"voterIdNumber\": \"Not Reported\",\n                \"dateOfBirth\": \"19991012\"\n              }\n            ],\n            \"caisHolderAddressDetails\": [\n              {\n                \"firstLineOfAddressNonNormalized\": \"GITAMAI HOUSING SO ROOM NO 101 JADHAV\",\n                \"secondLineOfAddressNonNormalized\": \"SANKUL NASHIK KAMATWADA NASHIK\",\n                \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                \"cityNonNormalized\": \"Not Reported\",\n                \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                \"stateNonNormalized\": \"27\",\n                \"zipPostalCodeNonNormalized\": \"422010\",\n                \"countryCodeNonNormalized\": \"IB\",\n                \"addressIndicatorNonNormalized\": \"02\",\n                \"residenceCodeNonNormalized\": \"Not Reported\"\n              },\n              {\n                \"firstLineOfAddressNonNormalized\": \"AUISY TECHNOLOGIES 3RD FLOOR, SHREYAS\",\n                \"secondLineOfAddressNonNormalized\": \"ETERNA BAVDHAN PUNE MAHARASHTRA\",\n                \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                \"cityNonNormalized\": \"Not Reported\",\n                \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                \"stateNonNormalized\": \"27\",\n                \"zipPostalCodeNonNormalized\": \"411021\",\n                \"countryCodeNonNormalized\": \"IB\",\n                \"addressIndicatorNonNormalized\": \"02\",\n                \"residenceCodeNonNormalized\": \"Not Reported\"\n              },\n              {\n                \"firstLineOfAddressNonNormalized\": \"FLAT NO.1208, 12TH FLOOR, LAKESHORE\",\n                \"secondLineOfAddressNonNormalized\": \"BEHIND AKSHARA INTERNATIONAL SCHOOL\",\n                \"thirdLineOfAddressNonNormalized\": \"SANTHOSH BEHIND AKSHARA INTERNATIONAL\",\n                \"cityNonNormalized\": \"SCHOOL\",\n                \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                \"stateNonNormalized\": \"27\",\n                \"zipPostalCodeNonNormalized\": \"411033\",\n                \"countryCodeNonNormalized\": \"IB\",\n                \"addressIndicatorNonNormalized\": \"02\",\n                \"residenceCodeNonNormalized\": \"Not Reported\"\n              },\n              {\n                \"firstLineOfAddressNonNormalized\": \"GITAMAI HOUSING SO ROOM NO 101JADHAV SAN\",\n                \"secondLineOfAddressNonNormalized\": \"KUL NASHIK KAMATWADANASHIK\",\n                \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                \"cityNonNormalized\": \"Not Reported\",\n                \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                \"stateNonNormalized\": \"27\",\n                \"zipPostalCodeNonNormalized\": \"422010\",\n                \"countryCodeNonNormalized\": \"IB\",\n                \"addressIndicatorNonNormalized\": \"02\",\n                \"residenceCodeNonNormalized\": \"Not Reported\"\n              },\n              {\n                \"firstLineOfAddressNonNormalized\": \"FLAT NO.1208, 12TH FLOORLAKESHORE BEHIND\",\n                \"secondLineOfAddressNonNormalized\": \"AKSHARAINTERNATIONAL SCHOOL SANTHOSH\",\n                \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                \"cityNonNormalized\": \"Not Reported\",\n                \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                \"stateNonNormalized\": \"27\",\n                \"zipPostalCodeNonNormalized\": \"411033\",\n                \"countryCodeNonNormalized\": \"IB\",\n                \"addressIndicatorNonNormalized\": \"02\",\n                \"residenceCodeNonNormalized\": \"Not Reported\"\n              },\n              {\n                \"firstLineOfAddressNonNormalized\": \"AUISY TECHNOLOGIES3RD FLOOR, SHREYAS ETE\",\n                \"secondLineOfAddressNonNormalized\": \"RNA BAVDHANPUNE MAHARASHTRA\",\n                \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                \"cityNonNormalized\": \"Not Reported\",\n                \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                \"stateNonNormalized\": \"27\",\n                \"zipPostalCodeNonNormalized\": \"411021\",\n                \"countryCodeNonNormalized\": \"IB\",\n                \"addressIndicatorNonNormalized\": \"02\",\n                \"residenceCodeNonNormalized\": \"Not Reported\"\n              }\n            ],\n            \"caisHolderPhoneDetails\": [\n              {\n                \"telephoneNumber\": \"******5793\",\n                \"telephoneType\": \"****\",\n                \"telephoneExtension\": \"Not Reported\",\n                \"mobileTelephoneNumber\": \"Not Reported\",\n                \"faxNumber\": \"Not Reported\",\n                \"emailId\": \"T***@AUISY.COM\"\n              },\n              {\n                \"telephoneNumber\": \"******1899\",\n                \"telephoneType\": \"****\",\n                \"telephoneExtension\": \"Not Reported\",\n                \"mobileTelephoneNumber\": \"Not Reported\",\n                \"faxNumber\": \"Not Reported\",\n                \"emailId\": \"T***@AUISY.COM\"\n              },\n              {\n                \"telephoneNumber\": \"******0101\",\n                \"telephoneType\": \"****\",\n                \"telephoneExtension\": \"Not Reported\",\n                \"mobileTelephoneNumber\": \"Not Reported\",\n                \"faxNumber\": \"Not Reported\",\n                \"emailId\": \"T***@AUISY.COM\"\n              },\n              {\n                \"telephoneNumber\": \"Not Reported\",\n                \"telephoneType\": \"****\",\n                \"telephoneExtension\": \"Not Reported\",\n                \"mobileTelephoneNumber\": \"******1899\",\n                \"faxNumber\": \"Not Reported\",\n                \"emailId\": \"T***@AUISY.COM\"\n              }\n            ],\n            \"caisHolderIdDetails\": [\n              {\n                \"incomeTaxPan\": \"******638L\",\n                \"panIssueDate\": \"Not Reported\",\n                \"panExpirationDate\": \"Not Reported\",\n                \"passportNumber\": \"Not Reported\",\n                \"passportIssueDate\": \"Not Reported\",\n                \"passportExpirationDate\": \"Not Reported\",\n                \"voterIdNumber\": \"Not Reported\",\n                \"voterIdIssueDate\": \"Not Reported\",\n                \"voterIdExpirationDate\": \"Not Reported\",\n                \"driverLicenseNumber\": \"Not Reported\",\n                \"driverLicenseIssueDate\": \"Not Reported\",\n                \"driverLicenseExpirationDate\": \"Not Reported\",\n                \"rationCardNumber\": \"Not Reported\",\n                \"rationCardIssueDate\": \"Not Reported\",\n                \"rationCardExpirationDate\": \"Not Reported\",\n                \"universalIdNumber\": \"Not Reported\",\n                \"universalIdIssueDate\": \"Not Reported\",\n                \"universalIdExpirationDate\": \"Not Reported\",\n                \"emailId\": \"Not Reported\"\n              }\n            ],\n            \"suitFiledWillfulDefault\": \"Not Reported\",\n            \"accountReviewData\": []\n          },\n          {\n            \"identificationNumber\": \"PVT3090001\",\n            \"subscriberName\": \"ICICI Bank\",\n            \"accountNumber\": \"************5596\",\n            \"portfolioType\": \"R\",\n            \"accountType\": \"10\",\n            \"openDate\": \"20231227\",\n            \"creditLimitAmount\": \"85000\",\n            \"highestCreditOrOriginalLoanAmount\": \"50000\",\n            \"termsDuration\": \"Not Reported\",\n            \"termsFrequency\": \"Not Reported\",\n            \"scheduledMonthlyPaymentAmount\": \"Not Reported\",\n            \"accountStatus\": \"11\",\n            \"paymentRating\": \"0\",\n            \"paymentHistoryProfile\": \"00000000000000000000?000?00?????????\",\n            \"specialComment\": \"Not Reported\",\n            \"currentBalance\": \"0\",\n            \"amountPastDue\": \"0\",\n            \"originalChargeOffAmount\": \"Not Reported\",\n            \"dateReported\": \"20260930\",\n            \"dateOfFirstDelinquency\": \"Not Reported\",\n            \"dateClosed\": \"Not Reported\",\n            \"dateOfLastPayment\": \"20260813\",\n            \"suitFiledWillfulDefaultWrittenOffStatus\": \"Not Reported\",\n            \"writtenOffSettledStatus\": \"Not Reported\",\n            \"valueOfCreditsLastMonth\": \"Not Reported\",\n            \"occupationCode\": \"Not Reported\",\n            \"settlementAmount\": \"Not Reported\",\n            \"valueOfCollateral\": \"Not Reported\",\n            \"typeOfCollateral\": \"Not Reported\",\n            \"writtenOffAmtTotal\": \"Not Reported\",\n            \"writtenOffAmtPrincipal\": \"Not Reported\",\n            \"rateOfInterest\": \"Not Reported\",\n            \"repaymentTenure\": \"0\",\n            \"promotionalRateFlag\": \"Not Reported\",\n            \"income\": \"Not Reported\",\n            \"incomeIndicator\": \"Not Reported\",\n            \"incomeFrequencyIndicator\": \"Not Reported\",\n            \"defaultStatusDate\": \"Not Reported\",\n            \"litigationStatusDate\": \"Not Reported\",\n            \"writeOffStatusDate\": \"Not Reported\",\n            \"dateOfAddition\": \"20240612\",\n            \"currencyCode\": \"INR\",\n            \"subscriberComments\": \"Not Reported\",\n            \"consumerComments\": \"Not Reported\",\n            \"accountHoldertypeCode\": \"1\",\n            \"caisAccountHistory\": [\n              {\n                \"year\": \"2026\",\n                \"month\": \"09\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"08\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"07\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"06\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"05\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"04\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"03\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"02\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2026\",\n                \"month\": \"01\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2025\",\n                \"month\": \"12\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2025\",\n                \"month\": \"11\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2025\",\n                \"month\": \"10\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2025\",\n                \"month\": \"09\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2025\",\n                \"month\": \"08\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2025\",\n                \"month\": \"07\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2025\",\n                \"month\": \"06\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2025\",\n                \"month\": \"05\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2025\",\n                \"month\": \"04\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2025\",\n                \"month\": \"03\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2025\",\n                \"month\": \"02\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2025\",\n                \"month\": \"01\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2024\",\n                \"month\": \"11\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2024\",\n                \"month\": \"10\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2024\",\n                \"month\": \"09\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2024\",\n                \"month\": \"07\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              },\n              {\n                \"year\": \"2024\",\n                \"month\": \"06\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              }\n            ],\n            \"caisHolderDetails\": [\n              {\n                \"surnameNonNormalized\": \"TEJAS\",\n                \"firstNameNonNormalized\": \"SATISH\",\n                \"middleName1NonNormalized\": \"JAWALE\",\n                \"middleName2NonNormalized\": \"Not Reported\",\n                \"middleName3NonNormalized\": \"Not Reported\",\n                \"alias\": \"Not Reported\",\n                \"genderCode\": \"1\",\n                \"incomeTaxPan\": \"******638L\",\n                \"passportNumber\": \"Not Reported\",\n                \"voterIdNumber\": \"Not Reported\",\n                \"dateOfBirth\": \"19991012\"\n              }\n            ],\n            \"caisHolderAddressDetails\": [\n              {\n                \"firstLineOfAddressNonNormalized\": \"GITAMAI HOUSING SO ROOM,NO 101,JADHAV SA\",\n                \"secondLineOfAddressNonNormalized\": \"NKUL, KAMATWADA,NASHIK AMBAD KHURD\",\n                \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                \"cityNonNormalized\": \"Not Reported\",\n                \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                \"stateNonNormalized\": \"27\",\n                \"zipPostalCodeNonNormalized\": \"422010\",\n                \"countryCodeNonNormalized\": \"IB\",\n                \"addressIndicatorNonNormalized\": \"02\",\n                \"residenceCodeNonNormalized\": \"Not Reported\"\n              }\n            ],\n            \"caisHolderPhoneDetails\": [\n              {\n                \"telephoneNumber\": \"Not Reported\",\n                \"telephoneType\": \"****\",\n                \"telephoneExtension\": \"Not Reported\",\n                \"mobileTelephoneNumber\": \"******1899\",\n                \"faxNumber\": \"Not Reported\",\n                \"emailId\": \"T***@EBIXCASH.COM\"\n              }\n            ],\n            \"caisHolderIdDetails\": [\n              {\n                \"incomeTaxPan\": \"******638L\",\n                \"panIssueDate\": \"Not Reported\",\n                \"panExpirationDate\": \"Not Reported\",\n                \"passportNumber\": \"Not Reported\",\n                \"passportIssueDate\": \"Not Reported\",\n                \"passportExpirationDate\": \"Not Reported\",\n                \"voterIdNumber\": \"Not Reported\",\n                \"voterIdIssueDate\": \"Not Reported\",\n                \"voterIdExpirationDate\": \"Not Reported\",\n                \"driverLicenseNumber\": \"Not Reported\",\n                \"driverLicenseIssueDate\": \"Not Reported\",\n                \"driverLicenseExpirationDate\": \"Not Reported\",\n                \"rationCardNumber\": \"Not Reported\",\n                \"rationCardIssueDate\": \"Not Reported\",\n                \"rationCardExpirationDate\": \"Not Reported\",\n                \"universalIdNumber\": \"Not Reported\",\n                \"universalIdIssueDate\": \"Not Reported\",\n                \"universalIdExpirationDate\": \"Not Reported\",\n                \"emailId\": \"Not Reported\"\n              }\n            ],\n            \"suitFiledWillfulDefault\": \"00\",\n            \"accountReviewData\": []\n          },\n          {\n            \"identificationNumber\": \"PVT3090001\",\n            \"subscriberName\": \"ICICI Bank\",\n            \"accountNumber\": \"********1779\",\n            \"portfolioType\": \"R\",\n            \"accountType\": \"10\",\n            \"openDate\": \"20231001\",\n            \"creditLimitAmount\": \"10000\",\n            \"highestCreditOrOriginalLoanAmount\": \"590\",\n            \"termsDuration\": \"Not Reported\",\n            \"termsFrequency\": \"Not Reported\",\n            \"scheduledMonthlyPaymentAmount\": \"Not Reported\",\n            \"accountStatus\": \"13\",\n            \"paymentRating\": \"0\",\n            \"paymentHistoryProfile\": \"N\",\n            \"specialComment\": \"Not Reported\",\n            \"currentBalance\": \"0\",\n            \"amountPastDue\": \"0\",\n            \"originalChargeOffAmount\": \"Not Reported\",\n            \"dateReported\": \"20231031\",\n            \"dateOfFirstDelinquency\": \"Not Reported\",\n            \"dateClosed\": \"20231024\",\n            \"dateOfLastPayment\": \"20231024\",\n            \"suitFiledWillfulDefaultWrittenOffStatus\": \"Not Reported\",\n            \"writtenOffSettledStatus\": \"Not Reported\",\n            \"valueOfCreditsLastMonth\": \"Not Reported\",\n            \"occupationCode\": \"S\",\n            \"settlementAmount\": \"Not Reported\",\n            \"valueOfCollateral\": \"Not Reported\",\n            \"typeOfCollateral\": \"Not Reported\",\n            \"writtenOffAmtTotal\": \"Not Reported\",\n            \"writtenOffAmtPrincipal\": \"Not Reported\",\n            \"rateOfInterest\": \"Not Reported\",\n            \"repaymentTenure\": \"0\",\n            \"promotionalRateFlag\": \"Not Reported\",\n            \"income\": \"Not Reported\",\n            \"incomeIndicator\": \"Not Reported\",\n            \"incomeFrequencyIndicator\": \"Not Reported\",\n            \"defaultStatusDate\": \"Not Reported\",\n            \"litigationStatusDate\": \"Not Reported\",\n            \"writeOffStatusDate\": \"Not Reported\",\n            \"dateOfAddition\": \"20231031\",\n            \"currencyCode\": \"INR\",\n            \"subscriberComments\": \"Not Reported\",\n            \"consumerComments\": \"Not Reported\",\n            \"accountHoldertypeCode\": \"1\",\n            \"caisAccountHistory\": [\n              {\n                \"year\": \"2023\",\n                \"month\": \"10\",\n                \"daysPastDue\": \"0\",\n                \"assetClassification\": \"Not Reported\"\n              }\n            ],\n            \"caisHolderDetails\": [\n              {\n                \"surnameNonNormalized\": \"TEJAS SATISH JAWALE\",\n                \"firstNameNonNormalized\": \"Not Reported\",\n                \"middleName1NonNormalized\": \"Not Reported\",\n                \"middleName2NonNormalized\": \"Not Reported\",\n                \"middleName3NonNormalized\": \"Not Reported\",\n                \"alias\": \"Not Reported\",\n                \"genderCode\": \"1\",\n                \"incomeTaxPan\": \"******638L\",\n                \"passportNumber\": \"Not Reported\",\n                \"voterIdNumber\": \"Not Reported\",\n                \"dateOfBirth\": \"19991012\"\n              }\n            ],\n            \"caisHolderAddressDetails\": [\n              {\n                \"firstLineOfAddressNonNormalized\": \"GITAMAI HOUSING SO ROOM,NO 101,JADHAV SA\",\n                \"secondLineOfAddressNonNormalized\": \"KAMATWADA,NASHIK AMBAD KHURD\",\n                \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                \"cityNonNormalized\": \"Not Reported\",\n                \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                \"stateNonNormalized\": \"27\",\n                \"zipPostalCodeNonNormalized\": \"422010\",\n                \"countryCodeNonNormalized\": \"IB\",\n                \"addressIndicatorNonNormalized\": \"02\",\n                \"residenceCodeNonNormalized\": \"Not Reported\"\n              }\n            ],\n            \"caisHolderPhoneDetails\": [\n              {\n                \"telephoneNumber\": \"Not Reported\",\n                \"telephoneType\": \"****\",\n                \"telephoneExtension\": \"Not Reported\",\n                \"mobileTelephoneNumber\": \"********1899\",\n                \"faxNumber\": \"Not Reported\",\n                \"emailId\": \"T***@GMAIL.COM\"\n              },\n              {\n                \"telephoneNumber\": \"********1899\",\n                \"telephoneType\": \"****\",\n                \"telephoneExtension\": \"Not Reported\",\n                \"mobileTelephoneNumber\": \"Not Reported\",\n                \"faxNumber\": \"Not Reported\",\n                \"emailId\": \"T***@GMAIL.COM\"\n              }\n            ],\n            \"caisHolderIdDetails\": [\n              {\n                \"incomeTaxPan\": \"******638L\",\n                \"panIssueDate\": \"Not Reported\",\n                \"panExpirationDate\": \"Not Reported\",\n                \"passportNumber\": \"Not Reported\",\n                \"passportIssueDate\": \"Not Reported\",\n                \"passportExpirationDate\": \"Not Reported\",\n                \"voterIdNumber\": \"Not Reported\",\n                \"voterIdIssueDate\": \"Not Reported\",\n                \"voterIdExpirationDate\": \"Not Reported\",\n                \"driverLicenseNumber\": \"Not Reported\",\n                \"driverLicenseIssueDate\": \"Not Reported\",\n                \"driverLicenseExpirationDate\": \"Not Reported\",\n                \"rationCardNumber\": \"Not Reported\",\n                \"rationCardIssueDate\": \"Not Reported\",\n                \"rationCardExpirationDate\": \"Not Reported\",\n                \"universalIdNumber\": \"Not Reported\",\n                \"universalIdIssueDate\": \"Not Reported\",\n                \"universalIdExpirationDate\": \"Not Reported\",\n                \"emailId\": \"Not Reported\"\n              }\n            ],\n            \"suitFiledWillfulDefault\": \"Not Reported\",\n            \"accountReviewData\": []\n          }\n        ]\n      },\n      \"matchInformation\": {\n        \"exactMatch\": \"Y\"\n      },\n      \"enquirySummary\": {\n        \"last7Days\": 0,\n        \"last30Days\": 0,\n        \"last90Days\": 0,\n        \"last180Days\": 0\n      },\n      \"creditEnquiries\": {\n        \"summary\": {\n          \"capsLast7Days\": \"0\",\n          \"capsLast30Days\": \"0\",\n          \"capsLast90Days\": \"0\",\n          \"capsLast180Days\": \"0\"\n        },\n        \"applications\": []\n      },\n      \"nonCreditEnquiries\": {\n        \"summary\": {\n          \"nonCreditCapsLast7Days\": \"0\",\n          \"nonCreditCapsLast30Days\": \"0\",\n          \"nonCreditCapsLast90Days\": \"0\",\n          \"nonCreditCapsLast180Days\": \"0\"\n        },\n        \"applications\": []\n      },\n      \"scoreDetails\": {\n        \"score\": 841,\n        \"confidenceLevel\": null\n      },\n      \"header\": {},\n      \"userMessage\": {}\n    }\n  },\n  \"scoreGeneratedAt\": \"2026-10-13T06:08:50.626027Z\",\n  \"nextEligibleAt\": \"2026-11-12T06:08:50.626027Z\",\n  \"remainingDays\": 30,\n  \"remainingSeconds\": 2591963,\n  \"eligibleForRefresh\": false,\n  \"message\": \"You can refresh your credit score after 30 day(s).\"\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "PDF Generation",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          },
+          {
+            "key": "X-User-Id",
+            "value": "BOLT114",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          },
+          {
+            "key": "X-Credit-Report-Id",
+            "value": "CS-BF739854F0844583",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/credit-score/reports/pdf",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "credit-score",
+            "reports",
+            "pdf"
+          ],
+          "query": [],
+          "variable": []
+        }
+      },
+      "response": [
+        {
+          "name": "PDF Generation",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "BOLT114",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              },
+              {
+                "key": "X-Credit-Report-Id",
+                "value": "CS-BF739854F0844583",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/credit-score/reports/pdf",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "credit-score",
+                "reports",
+                "pdf"
+              ],
+              "query": [],
+              "variable": []
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "cache-control",
+              "value": "no-store",
+              "name": "cache-control",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff",
+              "name": "x-content-type-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0",
+              "name": "x-xss-protection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "DENY",
+              "name": "x-frame-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked",
+              "name": "transfer-encoding",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 13 Oct 2026 06:08:54 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=60",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"full_name\": \"TEJAS SATISH JAWALE\",\n  \"pdf_status\": \"pdf_generated\",\n  \"report_pdf_url\": \"https://dev-stage-for-tpap-as-is.s3.ap-south-1.amazonaws.com/publictpap/credit-score/reports/CS-BF739854F0844583-layout-v2.pdf?response-content-disposition=inline%3B%20filename%3D%22TEJAS_SATISH_JAWALE_credit-score-report.pdf%22&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20261013T060854Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIATXAQLY3DTBTHMVEK%2F20261013%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=c566975b1fb3dc1c9423a27e17b1822bfbfa357542d6dc53d2b52fc3a56ab3dc\",\n  \"downloadUrl\": \"https://dev-stage-for-tpap-as-is.s3.ap-south-1.amazonaws.com/publictpap/credit-score/reports/CS-BF739854F0844583-layout-v2.pdf?response-content-disposition=attachment%3B%20filename%3D%22TEJAS_SATISH_JAWALE_credit-score-report.pdf%22&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20261013T060854Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIATXAQLY3DTBTHMVEK%2F20261013%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=a0b6d2896ad0755311398a3a8126579ffa6ea1addfc293e8fbb5b7e151ba4d84\",\n  \"remainingDays\": 30,\n  \"reportAvailableUntil\": \"2026-11-12T06:08:50.626027Z\",\n  \"message\": \"Credit score report is ready. You can view or download it during the 30-day availability period.\",\n  \"success\": true\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Delete Data",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          },
+          {
+            "key": "X-User-Id",
+            "value": "BOLT114",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/credit-score/data",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "credit-score",
+            "data"
+          ],
+          "query": [],
+          "variable": []
+        }
+      },
+      "response": [
+        {
+          "name": "Delete",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "BOLT113",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              },
+              {
+                "key": "X-Registered-Mobile",
+                "value": "7420871899",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/credit-score/data",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "credit-score",
+                "data"
+              ],
+              "query": [],
+              "variable": []
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff",
+              "name": "x-content-type-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0",
+              "name": "x-xss-protection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, no-store, max-age=0, must-revalidate",
+              "name": "cache-control",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "pragma",
+              "value": "no-cache",
+              "name": "pragma",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "expires",
+              "value": "0",
+              "name": "expires",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "DENY",
+              "name": "x-frame-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked",
+              "name": "transfer-encoding",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 07 Oct 2026 12:43:20 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=60",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"code\": \"CREDIT_SCORE_DATA_DELETED\",\n  \"message\": \"Credit score data deleted successfully\"\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    },
+    {
+      "name": "Decrypt Data",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          },
+          {
+            "key": "X-User-Id",
+            "value": "BOLT114",
+            "description": "",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/api/v1/credit-score/debug/decrypt",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "credit-score",
+            "debug",
+            "decrypt"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"requestId\": \"CS-FE43EC4D426D420F\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "name": "Decrypt Data",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "BOLT113",
+                "description": "",
+                "disabled": false,
+                "type": "default"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/credit-score/debug/decrypt",
+              "protocol": "http",
+              "host": [
+                "localhost:8080"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "credit-score",
+                "debug",
+                "decrypt"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"requestId\": \"CS-87BF8CE2F65E455D\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff",
+              "name": "x-content-type-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "0",
+              "name": "x-xss-protection",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, no-store, max-age=0, must-revalidate",
+              "name": "cache-control",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "pragma",
+              "value": "no-cache",
+              "name": "pragma",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "expires",
+              "value": "0",
+              "name": "expires",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "DENY",
+              "name": "x-frame-options",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json",
+              "name": "content-type",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked",
+              "name": "transfer-encoding",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 07 Oct 2026 12:39:55 GMT",
+              "name": "date",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=60",
+              "name": "keep-alive",
+              "description": "",
+              "type": "text"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive",
+              "name": "connection",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"success\": true,\n  \"code\": \"CREDIT_SCORE_DATA_DECRYPTED\",\n  \"message\": \"Credit score data decrypted successfully\",\n  \"data\": {\n    \"requestId\": \"CS-87BF8CE2F65E455D\",\n    \"decryptedData\": {\n      \"success\": true,\n      \"code\": \"CREDIT_SCORE_FETCHED\",\n      \"message\": \"Credit score fetched successfully\",\n      \"data\": {\n        \"requestId\": \"CS-87BF8CE2F65E455D\",\n        \"status\": \"SUCCESS\",\n        \"score\": 837,\n        \"band\": \"EXCELLENT\",\n        \"interpretation\": \"Top tier with the best approval odds and pricing.\",\n        \"report\": {\n          \"reportDate\": \"20261007\",\n          \"reportTime\": \"162655\",\n          \"reportNumber\": \"1791370615185\"\n        },\n        \"summary\": {\n          \"totalAccounts\": 3,\n          \"activeAccounts\": 2,\n          \"closedAccounts\": 1,\n          \"totalOutstanding\": 0,\n          \"recentEnquiries\": 0\n        },\n        \"partialMatch\": false,\n        \"cautionMessage\": null,\n        \"creditReport\": {\n          \"creditProfile\": {\n            \"details\": {\n              \"reportDate\": 20261007,\n              \"reportTime\": 162655,\n              \"version\": \"V2.4\",\n              \"reportNumber\": \"1791370615185\"\n            }\n          },\n          \"application\": {\n            \"details\": {\n              \"currentApplicationDetails\": {\n                \"enquiryReason\": \"6\",\n                \"financePurpose\": \"Not Reported\",\n                \"amountFinanced\": \"0\",\n                \"durationOfAgreement\": \"0\",\n                \"currentApplicantDetails\": {\n                  \"lastName\": \"SATISH JAWALE\",\n                  \"firstName\": \"TEJAS\",\n                  \"middleName1\": \"Not Reported\",\n                  \"middleName2\": \"Not Reported\",\n                  \"middleName3\": \"Not Reported\",\n                  \"genderCode\": \"1\",\n                  \"incomeTaxPan\": \"******638L\",\n                  \"panIssueDate\": \"Not Reported\",\n                  \"panExpirationDate\": \"Not Reported\",\n                  \"passportIssueDate\": \"Not Reported\",\n                  \"passportExpirationDate\": \"Not Reported\",\n                  \"voterSIdentityCard\": \"Not Reported\",\n                  \"voterIdIssueDate\": \"Not Reported\",\n                  \"voterIdExpirationDate\": \"Not Reported\",\n                  \"driverLicenseNumber\": \"Not Reported\",\n                  \"driverLicenseIssueDate\": \"Not Reported\",\n                  \"driverLicenseExpirationDate\": \"Not Reported\",\n                  \"rationCardNumber\": \"Not Reported\",\n                  \"rationCardIssueDate\": \"Not Reported\",\n                  \"rationCardExpirationDate\": \"Not Reported\",\n                  \"universalIdNumber\": \"Not Reported\",\n                  \"universalIdIssueDate\": \"Not Reported\",\n                  \"universalIdExpirationDate\": \"Not Reported\",\n                  \"dateOfBirthApplicant\": \"19991012\",\n                  \"telephoneNumberApplicant1st\": \"******5793\",\n                  \"telephoneExtension\": \"Not Reported\",\n                  \"telephoneType\": \"Not Reported\",\n                  \"mobilePhoneNumber\": \"******1899\",\n                  \"emailId\": \"T***@AUISY.COM\",\n                  \"passportNumber\": \"Not Reported\"\n                },\n                \"currentOtherDetails\": {\n                  \"income\": \"0\",\n                  \"maritalStatus\": \"Not Reported\",\n                  \"employmentStatus\": \"Not Reported\",\n                  \"timeWithEmployer\": \"Not Reported\",\n                  \"numberOfMajorCreditCardHeld\": \"Not Reported\"\n                },\n                \"currentApplicantAddressDetails\": {\n                  \"flatNoPlotNoHouseNo\": \"GITAMAI HOUSING SO ROOM NO 101 JADHAV\",\n                  \"bldgNoSocietyName\": \"Not Reported\",\n                  \"roadNoNameAreaLocality\": \"SANKUL NASHIK KAMATWADA NASHIK\",\n                  \"city\": \"Not Reported\",\n                  \"landmark\": \"Not Reported\",\n                  \"state\": \"27\",\n                  \"pinCode\": \"422010\",\n                  \"countryCode\": \"IB\"\n                },\n                \"currentApplicantAdditionalAddressDetails\": \"Not Reported\"\n              }\n            }\n          },\n          \"creditAccounts\": {\n            \"summary\": {\n              \"creditAccount\": {\n                \"creditAccountTotal\": \"3\",\n                \"creditAccountActive\": \"2\",\n                \"creditAccountDefault\": \"0\",\n                \"creditAccountClosed\": \"1\",\n                \"cADSuitFiledCurrentBalance\": \"0\"\n              },\n              \"totalOutstandingBalance\": {\n                \"outstandingBalanceSecured\": \"0\",\n                \"outstandingBalanceSecuredPercentage\": \"0\",\n                \"outstandingBalanceUnSecured\": \"0\",\n                \"outstandingBalanceUnSecuredPercentage\": \"0\",\n                \"outstandingBalanceAll\": \"0\"\n              }\n            },\n            \"accounts\": [\n              {\n                \"identificationNumber\": \"PVT3360001\",\n                \"subscriberName\": \"IDFC FIRST BANK LIMITED\",\n                \"accountNumber\": \"**********2088\",\n                \"portfolioType\": \"R\",\n                \"accountType\": \"10\",\n                \"openDate\": \"20260424\",\n                \"creditLimitAmount\": \"168000\",\n                \"highestCreditOrOriginalLoanAmount\": \"1481\",\n                \"termsDuration\": \"Not Reported\",\n                \"termsFrequency\": \"Not Reported\",\n                \"scheduledMonthlyPaymentAmount\": \"Not Reported\",\n                \"accountStatus\": \"11\",\n                \"paymentRating\": \"0\",\n                \"paymentHistoryProfile\": \"00000???????????????????????????????\",\n                \"specialComment\": \"Not Reported\",\n                \"currentBalance\": \"0\",\n                \"amountPastDue\": \"0\",\n                \"originalChargeOffAmount\": \"Not Reported\",\n                \"dateReported\": \"20260930\",\n                \"dateOfFirstDelinquency\": \"Not Reported\",\n                \"dateClosed\": \"Not Reported\",\n                \"dateOfLastPayment\": \"Not Reported\",\n                \"suitFiledWillfulDefaultWrittenOffStatus\": \"Not Reported\",\n                \"writtenOffSettledStatus\": \"Not Reported\",\n                \"valueOfCreditsLastMonth\": \"Not Reported\",\n                \"occupationCode\": \"Not Reported\",\n                \"settlementAmount\": \"Not Reported\",\n                \"valueOfCollateral\": \"Not Reported\",\n                \"typeOfCollateral\": \"Not Reported\",\n                \"writtenOffAmtTotal\": \"Not Reported\",\n                \"writtenOffAmtPrincipal\": \"Not Reported\",\n                \"rateOfInterest\": \"46.200\",\n                \"repaymentTenure\": \"0\",\n                \"promotionalRateFlag\": \"Not Reported\",\n                \"income\": \"Not Reported\",\n                \"incomeIndicator\": \"Not Reported\",\n                \"incomeFrequencyIndicator\": \"Not Reported\",\n                \"defaultStatusDate\": \"Not Reported\",\n                \"litigationStatusDate\": \"Not Reported\",\n                \"writeOffStatusDate\": \"Not Reported\",\n                \"dateOfAddition\": \"20260430\",\n                \"currencyCode\": \"INR\",\n                \"subscriberComments\": \"Not Reported\",\n                \"consumerComments\": \"Not Reported\",\n                \"accountHoldertypeCode\": \"1\",\n                \"caisAccountHistory\": [\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"09\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"S\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"08\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"S\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"07\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"S\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"06\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"05\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"04\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  }\n                ],\n                \"caisHolderDetails\": [\n                  {\n                    \"surnameNonNormalized\": \"TEJAS SATISH JAWALE\",\n                    \"firstNameNonNormalized\": \"Not Reported\",\n                    \"middleName1NonNormalized\": \"Not Reported\",\n                    \"middleName2NonNormalized\": \"Not Reported\",\n                    \"middleName3NonNormalized\": \"Not Reported\",\n                    \"alias\": \"Not Reported\",\n                    \"genderCode\": \"1\",\n                    \"incomeTaxPan\": \"******638L\",\n                    \"passportNumber\": \"Not Reported\",\n                    \"voterIdNumber\": \"Not Reported\",\n                    \"dateOfBirth\": \"19991012\"\n                  }\n                ],\n                \"caisHolderAddressDetails\": [\n                  {\n                    \"firstLineOfAddressNonNormalized\": \"GITAMAI HOUSING SO ROOM NO 101 JADHAV\",\n                    \"secondLineOfAddressNonNormalized\": \"SANKUL NASHIK KAMATWADA NASHIK\",\n                    \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"cityNonNormalized\": \"Not Reported\",\n                    \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"stateNonNormalized\": \"27\",\n                    \"zipPostalCodeNonNormalized\": \"422010\",\n                    \"countryCodeNonNormalized\": \"IB\",\n                    \"addressIndicatorNonNormalized\": \"02\",\n                    \"residenceCodeNonNormalized\": \"Not Reported\"\n                  },\n                  {\n                    \"firstLineOfAddressNonNormalized\": \"AUISY TECHNOLOGIES 3RD FLOOR, SHREYAS\",\n                    \"secondLineOfAddressNonNormalized\": \"ETERNA BAVDHAN PUNE MAHARASHTRA\",\n                    \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"cityNonNormalized\": \"Not Reported\",\n                    \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"stateNonNormalized\": \"27\",\n                    \"zipPostalCodeNonNormalized\": \"411021\",\n                    \"countryCodeNonNormalized\": \"IB\",\n                    \"addressIndicatorNonNormalized\": \"02\",\n                    \"residenceCodeNonNormalized\": \"Not Reported\"\n                  },\n                  {\n                    \"firstLineOfAddressNonNormalized\": \"FLAT NO.1208, 12TH FLOOR, LAKESHORE\",\n                    \"secondLineOfAddressNonNormalized\": \"BEHIND AKSHARA INTERNATIONAL SCHOOL\",\n                    \"thirdLineOfAddressNonNormalized\": \"SANTHOSH BEHIND AKSHARA INTERNATIONAL\",\n                    \"cityNonNormalized\": \"SCHOOL\",\n                    \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"stateNonNormalized\": \"27\",\n                    \"zipPostalCodeNonNormalized\": \"411033\",\n                    \"countryCodeNonNormalized\": \"IB\",\n                    \"addressIndicatorNonNormalized\": \"02\",\n                    \"residenceCodeNonNormalized\": \"Not Reported\"\n                  },\n                  {\n                    \"firstLineOfAddressNonNormalized\": \"GITAMAI HOUSING SO ROOM NO 101JADHAV SAN\",\n                    \"secondLineOfAddressNonNormalized\": \"KUL NASHIK KAMATWADANASHIK\",\n                    \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"cityNonNormalized\": \"Not Reported\",\n                    \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"stateNonNormalized\": \"27\",\n                    \"zipPostalCodeNonNormalized\": \"422010\",\n                    \"countryCodeNonNormalized\": \"IB\",\n                    \"addressIndicatorNonNormalized\": \"02\",\n                    \"residenceCodeNonNormalized\": \"Not Reported\"\n                  },\n                  {\n                    \"firstLineOfAddressNonNormalized\": \"FLAT NO.1208, 12TH FLOORLAKESHORE BEHIND\",\n                    \"secondLineOfAddressNonNormalized\": \"AKSHARAINTERNATIONAL SCHOOL SANTHOSH\",\n                    \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"cityNonNormalized\": \"Not Reported\",\n                    \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"stateNonNormalized\": \"27\",\n                    \"zipPostalCodeNonNormalized\": \"411033\",\n                    \"countryCodeNonNormalized\": \"IB\",\n                    \"addressIndicatorNonNormalized\": \"02\",\n                    \"residenceCodeNonNormalized\": \"Not Reported\"\n                  },\n                  {\n                    \"firstLineOfAddressNonNormalized\": \"AUISY TECHNOLOGIES3RD FLOOR, SHREYAS ETE\",\n                    \"secondLineOfAddressNonNormalized\": \"RNA BAVDHANPUNE MAHARASHTRA\",\n                    \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"cityNonNormalized\": \"Not Reported\",\n                    \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"stateNonNormalized\": \"27\",\n                    \"zipPostalCodeNonNormalized\": \"411021\",\n                    \"countryCodeNonNormalized\": \"IB\",\n                    \"addressIndicatorNonNormalized\": \"02\",\n                    \"residenceCodeNonNormalized\": \"Not Reported\"\n                  }\n                ],\n                \"caisHolderPhoneDetails\": [\n                  {\n                    \"telephoneNumber\": \"******5793\",\n                    \"telephoneType\": \"****\",\n                    \"telephoneExtension\": \"Not Reported\",\n                    \"mobileTelephoneNumber\": \"Not Reported\",\n                    \"faxNumber\": \"Not Reported\",\n                    \"emailId\": \"T***@AUISY.COM\"\n                  },\n                  {\n                    \"telephoneNumber\": \"******1899\",\n                    \"telephoneType\": \"****\",\n                    \"telephoneExtension\": \"Not Reported\",\n                    \"mobileTelephoneNumber\": \"Not Reported\",\n                    \"faxNumber\": \"Not Reported\",\n                    \"emailId\": \"T***@AUISY.COM\"\n                  },\n                  {\n                    \"telephoneNumber\": \"******0101\",\n                    \"telephoneType\": \"****\",\n                    \"telephoneExtension\": \"Not Reported\",\n                    \"mobileTelephoneNumber\": \"Not Reported\",\n                    \"faxNumber\": \"Not Reported\",\n                    \"emailId\": \"T***@AUISY.COM\"\n                  },\n                  {\n                    \"telephoneNumber\": \"Not Reported\",\n                    \"telephoneType\": \"****\",\n                    \"telephoneExtension\": \"Not Reported\",\n                    \"mobileTelephoneNumber\": \"******1899\",\n                    \"faxNumber\": \"Not Reported\",\n                    \"emailId\": \"T***@AUISY.COM\"\n                  }\n                ],\n                \"caisHolderIdDetails\": [\n                  {\n                    \"incomeTaxPan\": \"******638L\",\n                    \"panIssueDate\": \"Not Reported\",\n                    \"panExpirationDate\": \"Not Reported\",\n                    \"passportNumber\": \"Not Reported\",\n                    \"passportIssueDate\": \"Not Reported\",\n                    \"passportExpirationDate\": \"Not Reported\",\n                    \"voterIdNumber\": \"Not Reported\",\n                    \"voterIdIssueDate\": \"Not Reported\",\n                    \"voterIdExpirationDate\": \"Not Reported\",\n                    \"driverLicenseNumber\": \"Not Reported\",\n                    \"driverLicenseIssueDate\": \"Not Reported\",\n                    \"driverLicenseExpirationDate\": \"Not Reported\",\n                    \"rationCardNumber\": \"Not Reported\",\n                    \"rationCardIssueDate\": \"Not Reported\",\n                    \"rationCardExpirationDate\": \"Not Reported\",\n                    \"universalIdNumber\": \"Not Reported\",\n                    \"universalIdIssueDate\": \"Not Reported\",\n                    \"universalIdExpirationDate\": \"Not Reported\",\n                    \"emailId\": \"Not Reported\"\n                  }\n                ],\n                \"suitFiledWillfulDefault\": \"Not Reported\",\n                \"accountReviewData\": []\n              },\n              {\n                \"identificationNumber\": \"PVT3090001\",\n                \"subscriberName\": \"ICICI Bank\",\n                \"accountNumber\": \"************5596\",\n                \"portfolioType\": \"R\",\n                \"accountType\": \"10\",\n                \"openDate\": \"20231227\",\n                \"creditLimitAmount\": \"85000\",\n                \"highestCreditOrOriginalLoanAmount\": \"50000\",\n                \"termsDuration\": \"Not Reported\",\n                \"termsFrequency\": \"Not Reported\",\n                \"scheduledMonthlyPaymentAmount\": \"Not Reported\",\n                \"accountStatus\": \"11\",\n                \"paymentRating\": \"0\",\n                \"paymentHistoryProfile\": \"00000000000000000000?000?00????0????\",\n                \"specialComment\": \"Not Reported\",\n                \"currentBalance\": \"0\",\n                \"amountPastDue\": \"0\",\n                \"originalChargeOffAmount\": \"Not Reported\",\n                \"dateReported\": \"20260916\",\n                \"dateOfFirstDelinquency\": \"Not Reported\",\n                \"dateClosed\": \"Not Reported\",\n                \"dateOfLastPayment\": \"20260813\",\n                \"suitFiledWillfulDefaultWrittenOffStatus\": \"Not Reported\",\n                \"writtenOffSettledStatus\": \"Not Reported\",\n                \"valueOfCreditsLastMonth\": \"Not Reported\",\n                \"occupationCode\": \"Not Reported\",\n                \"settlementAmount\": \"Not Reported\",\n                \"valueOfCollateral\": \"Not Reported\",\n                \"typeOfCollateral\": \"Not Reported\",\n                \"writtenOffAmtTotal\": \"Not Reported\",\n                \"writtenOffAmtPrincipal\": \"Not Reported\",\n                \"rateOfInterest\": \"Not Reported\",\n                \"repaymentTenure\": \"0\",\n                \"promotionalRateFlag\": \"Not Reported\",\n                \"income\": \"Not Reported\",\n                \"incomeIndicator\": \"Not Reported\",\n                \"incomeFrequencyIndicator\": \"Not Reported\",\n                \"defaultStatusDate\": \"Not Reported\",\n                \"litigationStatusDate\": \"Not Reported\",\n                \"writeOffStatusDate\": \"Not Reported\",\n                \"dateOfAddition\": \"20240612\",\n                \"currencyCode\": \"INR\",\n                \"subscriberComments\": \"Not Reported\",\n                \"consumerComments\": \"Not Reported\",\n                \"accountHoldertypeCode\": \"1\",\n                \"caisAccountHistory\": [\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"09\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"08\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"07\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"06\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"05\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"04\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"03\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"02\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2026\",\n                    \"month\": \"01\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2025\",\n                    \"month\": \"12\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2025\",\n                    \"month\": \"11\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2025\",\n                    \"month\": \"10\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2025\",\n                    \"month\": \"09\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2025\",\n                    \"month\": \"08\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2025\",\n                    \"month\": \"07\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2025\",\n                    \"month\": \"06\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2025\",\n                    \"month\": \"05\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2025\",\n                    \"month\": \"04\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2025\",\n                    \"month\": \"03\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2025\",\n                    \"month\": \"02\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2025\",\n                    \"month\": \"01\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2024\",\n                    \"month\": \"11\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2024\",\n                    \"month\": \"10\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2024\",\n                    \"month\": \"09\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2024\",\n                    \"month\": \"07\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  },\n                  {\n                    \"year\": \"2024\",\n                    \"month\": \"06\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  }\n                ],\n                \"caisHolderDetails\": [\n                  {\n                    \"surnameNonNormalized\": \"TEJAS\",\n                    \"firstNameNonNormalized\": \"SATISH\",\n                    \"middleName1NonNormalized\": \"JAWALE\",\n                    \"middleName2NonNormalized\": \"Not Reported\",\n                    \"middleName3NonNormalized\": \"Not Reported\",\n                    \"alias\": \"Not Reported\",\n                    \"genderCode\": \"1\",\n                    \"incomeTaxPan\": \"******638L\",\n                    \"passportNumber\": \"Not Reported\",\n                    \"voterIdNumber\": \"Not Reported\",\n                    \"dateOfBirth\": \"19991012\"\n                  }\n                ],\n                \"caisHolderAddressDetails\": [\n                  {\n                    \"firstLineOfAddressNonNormalized\": \"GITAMAI HOUSING SO ROOM,NO 101,JADHAV SA\",\n                    \"secondLineOfAddressNonNormalized\": \"NKUL, KAMATWADA,NASHIK AMBAD KHURD\",\n                    \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"cityNonNormalized\": \"Not Reported\",\n                    \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"stateNonNormalized\": \"27\",\n                    \"zipPostalCodeNonNormalized\": \"422010\",\n                    \"countryCodeNonNormalized\": \"IB\",\n                    \"addressIndicatorNonNormalized\": \"02\",\n                    \"residenceCodeNonNormalized\": \"Not Reported\"\n                  }\n                ],\n                \"caisHolderPhoneDetails\": [\n                  {\n                    \"telephoneNumber\": \"Not Reported\",\n                    \"telephoneType\": \"****\",\n                    \"telephoneExtension\": \"Not Reported\",\n                    \"mobileTelephoneNumber\": \"******1899\",\n                    \"faxNumber\": \"Not Reported\",\n                    \"emailId\": \"T***@EBIXCASH.COM\"\n                  }\n                ],\n                \"caisHolderIdDetails\": [\n                  {\n                    \"incomeTaxPan\": \"******638L\",\n                    \"panIssueDate\": \"Not Reported\",\n                    \"panExpirationDate\": \"Not Reported\",\n                    \"passportNumber\": \"Not Reported\",\n                    \"passportIssueDate\": \"Not Reported\",\n                    \"passportExpirationDate\": \"Not Reported\",\n                    \"voterIdNumber\": \"Not Reported\",\n                    \"voterIdIssueDate\": \"Not Reported\",\n                    \"voterIdExpirationDate\": \"Not Reported\",\n                    \"driverLicenseNumber\": \"Not Reported\",\n                    \"driverLicenseIssueDate\": \"Not Reported\",\n                    \"driverLicenseExpirationDate\": \"Not Reported\",\n                    \"rationCardNumber\": \"Not Reported\",\n                    \"rationCardIssueDate\": \"Not Reported\",\n                    \"rationCardExpirationDate\": \"Not Reported\",\n                    \"universalIdNumber\": \"Not Reported\",\n                    \"universalIdIssueDate\": \"Not Reported\",\n                    \"universalIdExpirationDate\": \"Not Reported\",\n                    \"emailId\": \"Not Reported\"\n                  }\n                ],\n                \"suitFiledWillfulDefault\": \"00\",\n                \"accountReviewData\": []\n              },\n              {\n                \"identificationNumber\": \"PVT3090001\",\n                \"subscriberName\": \"ICICI Bank\",\n                \"accountNumber\": \"********1779\",\n                \"portfolioType\": \"R\",\n                \"accountType\": \"10\",\n                \"openDate\": \"20231001\",\n                \"creditLimitAmount\": \"10000\",\n                \"highestCreditOrOriginalLoanAmount\": \"590\",\n                \"termsDuration\": \"Not Reported\",\n                \"termsFrequency\": \"Not Reported\",\n                \"scheduledMonthlyPaymentAmount\": \"Not Reported\",\n                \"accountStatus\": \"13\",\n                \"paymentRating\": \"0\",\n                \"paymentHistoryProfile\": \"N\",\n                \"specialComment\": \"Not Reported\",\n                \"currentBalance\": \"0\",\n                \"amountPastDue\": \"0\",\n                \"originalChargeOffAmount\": \"Not Reported\",\n                \"dateReported\": \"20231031\",\n                \"dateOfFirstDelinquency\": \"Not Reported\",\n                \"dateClosed\": \"20231024\",\n                \"dateOfLastPayment\": \"20231024\",\n                \"suitFiledWillfulDefaultWrittenOffStatus\": \"Not Reported\",\n                \"writtenOffSettledStatus\": \"Not Reported\",\n                \"valueOfCreditsLastMonth\": \"Not Reported\",\n                \"occupationCode\": \"S\",\n                \"settlementAmount\": \"Not Reported\",\n                \"valueOfCollateral\": \"Not Reported\",\n                \"typeOfCollateral\": \"Not Reported\",\n                \"writtenOffAmtTotal\": \"Not Reported\",\n                \"writtenOffAmtPrincipal\": \"Not Reported\",\n                \"rateOfInterest\": \"Not Reported\",\n                \"repaymentTenure\": \"0\",\n                \"promotionalRateFlag\": \"Not Reported\",\n                \"income\": \"Not Reported\",\n                \"incomeIndicator\": \"Not Reported\",\n                \"incomeFrequencyIndicator\": \"Not Reported\",\n                \"defaultStatusDate\": \"Not Reported\",\n                \"litigationStatusDate\": \"Not Reported\",\n                \"writeOffStatusDate\": \"Not Reported\",\n                \"dateOfAddition\": \"20231031\",\n                \"currencyCode\": \"INR\",\n                \"subscriberComments\": \"Not Reported\",\n                \"consumerComments\": \"Not Reported\",\n                \"accountHoldertypeCode\": \"1\",\n                \"caisAccountHistory\": [\n                  {\n                    \"year\": \"2023\",\n                    \"month\": \"10\",\n                    \"daysPastDue\": \"0\",\n                    \"assetClassification\": \"Not Reported\"\n                  }\n                ],\n                \"caisHolderDetails\": [\n                  {\n                    \"surnameNonNormalized\": \"TEJAS SATISH JAWALE\",\n                    \"firstNameNonNormalized\": \"Not Reported\",\n                    \"middleName1NonNormalized\": \"Not Reported\",\n                    \"middleName2NonNormalized\": \"Not Reported\",\n                    \"middleName3NonNormalized\": \"Not Reported\",\n                    \"alias\": \"Not Reported\",\n                    \"genderCode\": \"1\",\n                    \"incomeTaxPan\": \"******638L\",\n                    \"passportNumber\": \"Not Reported\",\n                    \"voterIdNumber\": \"Not Reported\",\n                    \"dateOfBirth\": \"19991012\"\n                  }\n                ],\n                \"caisHolderAddressDetails\": [\n                  {\n                    \"firstLineOfAddressNonNormalized\": \"GITAMAI HOUSING SO ROOM,NO 101,JADHAV SA\",\n                    \"secondLineOfAddressNonNormalized\": \"KAMATWADA,NASHIK AMBAD KHURD\",\n                    \"thirdLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"cityNonNormalized\": \"Not Reported\",\n                    \"fifthLineOfAddressNonNormalized\": \"Not Reported\",\n                    \"stateNonNormalized\": \"27\",\n                    \"zipPostalCodeNonNormalized\": \"422010\",\n                    \"countryCodeNonNormalized\": \"IB\",\n                    \"addressIndicatorNonNormalized\": \"02\",\n                    \"residenceCodeNonNormalized\": \"Not Reported\"\n                  }\n                ],\n                \"caisHolderPhoneDetails\": [\n                  {\n                    \"telephoneNumber\": \"Not Reported\",\n                    \"telephoneType\": \"****\",\n                    \"telephoneExtension\": \"Not Reported\",\n                    \"mobileTelephoneNumber\": \"********1899\",\n                    \"faxNumber\": \"Not Reported\",\n                    \"emailId\": \"T***@GMAIL.COM\"\n                  },\n                  {\n                    \"telephoneNumber\": \"********1899\",\n                    \"telephoneType\": \"****\",\n                    \"telephoneExtension\": \"Not Reported\",\n                    \"mobileTelephoneNumber\": \"Not Reported\",\n                    \"faxNumber\": \"Not Reported\",\n                    \"emailId\": \"T***@GMAIL.COM\"\n                  }\n                ],\n                \"caisHolderIdDetails\": [\n                  {\n                    \"incomeTaxPan\": \"******638L\",\n                    \"panIssueDate\": \"Not Reported\",\n                    \"panExpirationDate\": \"Not Reported\",\n                    \"passportNumber\": \"Not Reported\",\n                    \"passportIssueDate\": \"Not Reported\",\n                    \"passportExpirationDate\": \"Not Reported\",\n                    \"voterIdNumber\": \"Not Reported\",\n                    \"voterIdIssueDate\": \"Not Reported\",\n                    \"voterIdExpirationDate\": \"Not Reported\",\n                    \"driverLicenseNumber\": \"Not Reported\",\n                    \"driverLicenseIssueDate\": \"Not Reported\",\n                    \"driverLicenseExpirationDate\": \"Not Reported\",\n                    \"rationCardNumber\": \"Not Reported\",\n                    \"rationCardIssueDate\": \"Not Reported\",\n                    \"rationCardExpirationDate\": \"Not Reported\",\n                    \"universalIdNumber\": \"Not Reported\",\n                    \"universalIdIssueDate\": \"Not Reported\",\n                    \"universalIdExpirationDate\": \"Not Reported\",\n                    \"emailId\": \"Not Reported\"\n                  }\n                ],\n                \"suitFiledWillfulDefault\": \"Not Reported\",\n                \"accountReviewData\": []\n              }\n            ]\n          },\n          \"matchInformation\": {\n            \"exactMatch\": \"Y\"\n          },\n          \"enquirySummary\": {\n            \"last7Days\": 0,\n            \"last30Days\": 0,\n            \"last90Days\": 0,\n            \"last180Days\": 0\n          },\n          \"creditEnquiries\": {\n            \"summary\": {\n              \"capsLast7Days\": \"0\",\n              \"capsLast30Days\": \"0\",\n              \"capsLast90Days\": \"0\",\n              \"capsLast180Days\": \"0\"\n            },\n            \"applications\": []\n          },\n          \"nonCreditEnquiries\": {\n            \"summary\": {\n              \"nonCreditCapsLast7Days\": \"0\",\n              \"nonCreditCapsLast30Days\": \"0\",\n              \"nonCreditCapsLast90Days\": \"0\",\n              \"nonCreditCapsLast180Days\": \"0\"\n            },\n            \"applications\": []\n          },\n          \"scoreDetails\": {\n            \"score\": 837,\n            \"confidenceLevel\": null\n          },\n          \"header\": {},\n          \"userMessage\": {}\n        }\n      }\n    }\n  }\n}",
+          "_postman_previewlanguage": "json"
+        }
+      ]
+    }
+  ],
+  "variable": []
+}
